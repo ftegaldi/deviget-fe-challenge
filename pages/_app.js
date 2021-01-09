@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  //TODO: redux provider and store go here
+  return <Component {...pageProps} />;
 }
 
 export default MyApp
