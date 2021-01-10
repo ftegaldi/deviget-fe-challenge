@@ -1,11 +1,11 @@
-import PostCard from 'components/PostCard';
+import { connect } from 'react-redux';
+import { selectPosts } from '@slices/postsSlice';
 
-import mockedData from 'mock/mockedData';
+import PostCard from 'components/PostCard';
 
 import { SidebarContainer, TopSection, SidebarBody, BottomSection, ShowHideButton } from './styled';
 
-const Sidebar = () => {
-  const { processedPosts } = mockedData;
+const Sidebar = ({ displayedPosts }) => {
   return (
     <SidebarContainer>
       <TopSection>
@@ -13,11 +13,11 @@ const Sidebar = () => {
         <ShowHideButton>{'<<'}</ShowHideButton>
       </TopSection>
       <SidebarBody>
-        {processedPosts.map((post, index) => (
+        {displayedPosts.map((post, index) => (
           <PostCard
             key={post.id}
             postData={post}
-            lastCard={index === processedPosts.length - 1 ? false : true}
+            lastCard={index === displayedPosts.length - 1 ? false : true}
           />
         ))}
       </SidebarBody>
@@ -28,4 +28,8 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => ({
+  displayedPosts: state.posts.displayedPosts,
+});
+
+export default connect(mapStateToProps)(Sidebar);

@@ -1,15 +1,19 @@
+import { connect } from 'react-redux';
+
 import Post from 'components/Post';
 
 import { Container } from './styled';
 
-import mockedPost from 'mock/mockedPost';
-
-const PostViewer = () => {
+const PostViewer = ({ selectedPost }) => {
   return (
     <Container>
-      <Post post={mockedPost} />
+      <Post post={selectedPost} />
     </Container>
   );
 };
 
-export default PostViewer;
+const mapStateToProps = (state) => ({
+  selectedPost: state.posts.selectedPost,
+});
+
+export default connect(mapStateToProps)(PostViewer);

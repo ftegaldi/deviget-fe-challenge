@@ -24,6 +24,9 @@
     * [ x ] Get top 50 posts
     * [ x ] Process raw data to be usable for the frontend
   * [ ] Deploy to vercel ▲
+  * [ ] Tests
+  * [ ] Environment variables
+  * [ ] Cleanup 🧹
 
 * [ ] Extra
   * [ ] Frontend
@@ -31,8 +34,12 @@
     * [ ] Config menu
       * [ ] Modal
       * [ ] Number of posts
+      * [ ] Restore posts
       * [ ] Dark mode?
       * [ ] Fix sidebar position?
       * [ ] Reset sidebar position?
     * [ ] Previous/Next?
-    * [ ] 
+    * [ ] Error cases component states
+  * [ ] API
+    * [ ] Number of posts
+  * [ ] Cleanup 🧹

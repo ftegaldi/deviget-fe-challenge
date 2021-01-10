@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { selectPost } from '@slices/postsSlice';
+
 import { getRelativeTime } from '@helpers';
 
 import { CardContainer, ReadIndicator, DismissButton, TopSection, MiddleSection, BottomSection } from './styled';
@@ -6,6 +10,12 @@ import { CardContainer, ReadIndicator, DismissButton, TopSection, MiddleSection,
 const PostCard = ({ postData, lastCard }) => {
   const [isRead, setIsRead] = useState(false);
   const { id, title, author, created_at, thumbnail, image_src, comments } = postData;
+  const dispatch = useDispatch();
+
+  const onSelectPost = () => {
+    dispatch(selectPost(postData));
+  };
+  
   return (
     <CardContainer lastCard={lastCard}>
       <TopSection>
@@ -13,14 +23,14 @@ const PostCard = ({ postData, lastCard }) => {
         <h2>{author}</h2>
         <p>{getRelativeTime(created_at)}</p>
       </TopSection>
-      <MiddleSection>
+      <MiddleSection onClick={onSelectPost}>
         <img src={thumbnail} />
         <h3>{title}</h3>
         <span class="material-icons">arrow_forward_ios</span>
       </MiddleSection>
       <BottomSection>
         <DismissButton>
-          <span class="material-icons">cancel</span> 
+          <span class="material-icons">cancel</span>
           <p>Dismiss Post</p>
         </DismissButton>
         <p>

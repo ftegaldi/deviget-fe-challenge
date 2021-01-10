@@ -1,8 +1,11 @@
 import '../styles/globals.css'
 import Head from 'next/head';
 
+import { Provider } from 'react-redux';
+
+import store from 'redux/store'
+
 const ReditPostsApp = ({ Component, pageProps }) => {
-  //TODO: redux provider and store go here
   return (
     <>
       <Head>
@@ -13,7 +16,11 @@ const ReditPostsApp = ({ Component, pageProps }) => {
           rel="stylesheet"
         ></link>
       </Head>
-      <Component {...pageProps} />
+
+      <Provider store={store}>
+         <Component {...pageProps} />
+      </Provider>
+      
     </>
   );
 };
