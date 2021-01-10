@@ -8,12 +8,12 @@
   * [ ] Frontend
     * [ x ] Basic components
     * [ ] Finish styling
-    * [ ] App state implementation
+    * [ x ] App state implementation
     * [ ] App state preservation
     * [ ] App state restoration
     * [ ] Indicator of unread/read post
-    * [ ] Dismiss post button
-    * [ ] Dismiss All button
+    * [ x ] Dismiss post button
+    * [ x ] Dismiss All button
     * [ ] Support for split layout
     * [ ] Responsive design
     * [ ] Pagination support

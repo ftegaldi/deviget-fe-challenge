@@ -25,9 +25,9 @@ const postsSlice = createSlice({
       state.selectedPost = action.payload;
     },
     dismissPost: (state, action) => {
-      const position = state.posts.findIndex((post) => post.id === action.payload.id);
-      state.dismissedPosts.push(...state.displayedPosts[position]);
-      state.posts.splice(position, 1);
+      const position = state.displayedPosts.findIndex((post) => post.id === action.payload.id);
+      state.dismissedPosts.push(action.payload);
+      state.displayedPosts.splice(position, 1);
     },
     dismissAllPosts: (state) => {
       state.displayedPosts = [];

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { selectPost } from '@slices/postsSlice';
+import { selectPost, dismissPost } from '@slices/postsSlice';
 
 import { getRelativeTime } from '@helpers';
 
@@ -14,6 +14,10 @@ const PostCard = ({ postData, lastCard }) => {
 
   const onSelectPost = () => {
     dispatch(selectPost(postData));
+  };
+
+  const onDismissPost = () => {
+    dispatch(dismissPost(postData));
   };
   
   return (
@@ -29,7 +33,7 @@ const PostCard = ({ postData, lastCard }) => {
         <span class="material-icons">arrow_forward_ios</span>
       </MiddleSection>
       <BottomSection>
-        <DismissButton>
+        <DismissButton onClick={onDismissPost}>
           <span class="material-icons">cancel</span>
           <p>Dismiss Post</p>
         </DismissButton>
