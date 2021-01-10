@@ -22,7 +22,7 @@ export const getRelativeTime = (utcTime) => {
     second: 1000,
   };
 
-  const elapsed = utcTime - Date.now();
+  const elapsed = -utcTime;
 
   const rtf = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto' });
 
