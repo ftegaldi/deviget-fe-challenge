@@ -6,8 +6,33 @@ export const processTopPostsData = (responseData) => {
       author: post.data.author,
       created_at: post.data.created_utc,
       thumbnail: post.data.thumbnail,
-      url: post.data.url,
+      image_src: post.data.url,
       comments: post.data.num_comments,
     };
   });
+};
+
+export const getRelativeTime = (utcTime) => {
+  const units = {
+    year: 24 * 60 * 60 * 1000 * 365,
+    month: (24 * 60 * 60 * 1000 * 365) / 12,
+    day: 24 * 60 * 60 * 1000,
+    hour: 60 * 60 * 1000,
+    minute: 60 * 1000,
+    second: 1000,
+  };
+
+  const elapsed = utcTime - Date.now();
+
+  const rtf = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto' });
+
+  const calculateRelTime = (elapsedTime) => {
+    for (let u in units) {
+      if (Math.abs(elapsedTime) > units[u] || u === 'second') {
+        return rtf.format(Math.round(elapsedTime / units[u]), u);
+      }
+    }
+  };
+
+  return calculateRelTime(elapsed);
 };

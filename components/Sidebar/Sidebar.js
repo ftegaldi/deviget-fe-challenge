@@ -1,17 +1,25 @@
 import PostCard from 'components/PostCard';
 
+import mockedData from 'mock/mockedData';
+
 import { SidebarContainer, TopSection, SidebarBody, BottomSection, ShowHideButton } from './styled';
 
 const Sidebar = () => {
+  const { processedPosts } = mockedData;
   return (
     <SidebarContainer>
       <TopSection>
-        <h2>Reddit Posts</h2>
+        <h1>Reddit Posts</h1>
         <ShowHideButton>{'<<'}</ShowHideButton>
       </TopSection>
       <SidebarBody>
-        {/* TODO: cards go here*/}
-        <PostCard />
+        {processedPosts.map((post, index) => (
+          <PostCard
+            key={post.id}
+            postData={post}
+            lastCard={index === processedPosts.length - 1 ? false : true}
+          />
+        ))}
       </SidebarBody>
       <BottomSection>
         <button>Dismiss All</button>
