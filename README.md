@@ -2,6 +2,10 @@
 
 -- documentation and comments go here --
 
+-- comments
+-design
+-link thumbnail
+
 ### Functionalities / TODO list
 
 * [ ] Minnimum
@@ -17,12 +21,14 @@
     * [ ] Support for split layout
     * [ ] Responsive design
     * [ ] Pagination support
-    * [ ] Go to full size picture
+    * [x] Go to full size picture
     * [ ] Saving pictures in picture gallery <--- still not sure about correct functionality
     * [ ] ANIMATIONS 💫
-  * [x] API
+    * [ ] 404
+  * [ ] API
     * [x] Get top 50 posts
     * [x] Process raw data to be usable for the frontend
+    * [ ] 404
   * [x] Deploy to vercel △
   * [ ] Tests
   * [ ] Environment variables

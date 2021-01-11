@@ -1,5 +1,5 @@
 ////////////////////////////
-// API endpoints helpers
+// API endpoint helpers
 ////////////////////////////
 
 export const processTopPostsData = (responseData) => {
@@ -12,6 +12,7 @@ export const processTopPostsData = (responseData) => {
       thumbnail: post.data.thumbnail,
       image_src: post.data.url,
       comments: post.data.num_comments,
+      is_video: post.data.is_video,
       isRead: false,
     };
   });

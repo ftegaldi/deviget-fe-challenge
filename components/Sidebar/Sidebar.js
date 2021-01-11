@@ -23,16 +23,21 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
         <SidebarContainer>
           <TopSection>
             <h1>Reddit Posts</h1>
-            <ShowHideButton onClick={onToggleSidebar}>{'<<'}</ShowHideButton>
+            <ShowHideButton onClick={onToggleSidebar}>
+              <span class="material-icons">close</span>
+            </ShowHideButton>
           </TopSection>
           <SidebarBody>
-            {displayedPosts.map((post, index) => (
-              <PostCard
-                key={post.id}
-                postData={post}
-                lastCard={index === displayedPosts.length - 1 ? false : true}
-              />
-            ))}
+            {displayedPosts.length ? (
+              displayedPosts.map((post, index) => (
+                <PostCard
+                  key={post.id}
+                  postData={post}
+                  lastCard={index === displayedPosts.length - 1 ? false : true}
+                />
+              ))) : (
+                'loading...')
+            }
           </SidebarBody>
           <BottomSection>
             <button onClick={onDismissAllPosts}>Dismiss All</button>
@@ -40,7 +45,9 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
         </SidebarContainer>
       ) : (
         (
-        <ShowHideButton onClick={onToggleSidebar}>{'>>'}</ShowHideButton>
+        <ShowHideButton isSidebarOpen={isSidebarOpen} onClick={onToggleSidebar}>
+          <span class="material-icons">view_list</span>
+        </ShowHideButton>
       )
       )}
     </>
