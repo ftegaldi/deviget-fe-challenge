@@ -14,6 +14,8 @@ export const processTopPostsData = (responseData) => {
       comments: post.data.num_comments,
       is_video: post.data.is_video,
       isRead: false,
+      isGif: post.data.url.includes('gifv'),
+      isExternal: !post.data.url_overridden_by_dest.includes('redd'),
     };
   });
 };
@@ -32,7 +34,7 @@ export const getRelativeTime = (utcTime) => {
     second: 1000,
   };
 
-  const elapsed = -utcTime;
+  const elapsed = utcTime;
 
   const rtf = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto' });
 

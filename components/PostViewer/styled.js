@@ -6,6 +6,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 0 0 20vw;
-  background-color: #FFFFFF;
+  padding: 5vh 0 5vh 20vw;
+  background-color: #ffffff;
+  overflow: scroll;
 `;

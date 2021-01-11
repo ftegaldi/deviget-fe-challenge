@@ -11,7 +11,7 @@
 * [ ] Minnimum
   * [ ] Frontend
     * [x] Basic components
-    * [ ] Finish styling
+    * [x] Finish styling
     * [x] App state implementation
     * [ ] App state preservation
     * [ ] App state restoration
