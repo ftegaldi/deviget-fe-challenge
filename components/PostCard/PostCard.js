@@ -8,8 +8,8 @@ import { getRelativeTime } from '@helpers';
 import { CardContainer, ReadIndicator, DismissButton, TopSection, MiddleSection, BottomSection } from './styled';
 
 const PostCard = ({ postData, lastCard }) => {
-  const [isRead, setIsRead] = useState(false);
-  const { id, title, author, created_at, thumbnail, image_src, comments } = postData;
+  // const [isRead, setIsRead] = useState(false);
+  const { id, title, author, created_at, thumbnail, comments, isRead } = postData;
   const dispatch = useDispatch();
 
   const onSelectPost = () => {
@@ -19,7 +19,7 @@ const PostCard = ({ postData, lastCard }) => {
   const onDismissPost = () => {
     dispatch(dismissPost(postData));
   };
-  
+
   return (
     <CardContainer lastCard={lastCard}>
       <TopSection>

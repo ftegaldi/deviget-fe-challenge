@@ -6,24 +6,24 @@
 
 * [ ] Minnimum
   * [ ] Frontend
-    * [ x ] Basic components
+    * [x] Basic components
     * [ ] Finish styling
-    * [ x ] App state implementation
+    * [x] App state implementation
     * [ ] App state preservation
     * [ ] App state restoration
-    * [ ] Indicator of unread/read post
-    * [ x ] Dismiss post button
-    * [ x ] Dismiss All button
+    * [x] Indicator of unread/read post
+    * [x] Dismiss post button
+    * [x] Dismiss All button
     * [ ] Support for split layout
     * [ ] Responsive design
     * [ ] Pagination support
     * [ ] Go to full size picture
-    * [ ] Saving pictures in picture gallery <--- still not sure about correct funtionality
+    * [ ] Saving pictures in picture gallery <--- still not sure about correct functionality
     * [ ] ANIMATIONS 💫
-  * [ x ] API
-    * [ x ] Get top 50 posts
-    * [ x ] Process raw data to be usable for the frontend
-  * [ ] Deploy to vercel ▲
+  * [x] API
+    * [x] Get top 50 posts
+    * [x] Process raw data to be usable for the frontend
+  * [x] Deploy to vercel △
   * [ ] Tests
   * [ ] Environment variables
   * [ ] Cleanup 🧹
@@ -40,6 +40,7 @@
       * [ ] Reset sidebar position?
     * [ ] Previous/Next?
     * [ ] Error cases component states
+    * [ ] Create redux selector for better performance
   * [ ] API
     * [ ] Number of posts
   * [ ] Cleanup 🧹

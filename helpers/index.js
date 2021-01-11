@@ -1,3 +1,7 @@
+////////////////////////////
+// API endpoints helpers
+////////////////////////////
+
 export const processTopPostsData = (responseData) => {
   return responseData.data.children.map((post) => {
     return {
@@ -8,9 +12,14 @@ export const processTopPostsData = (responseData) => {
       thumbnail: post.data.thumbnail,
       image_src: post.data.url,
       comments: post.data.num_comments,
+      isRead: false,
     };
   });
 };
+
+////////////////////////////
+// Component helpers
+////////////////////////////
 
 export const getRelativeTime = (utcTime) => {
   const units = {
@@ -36,3 +45,11 @@ export const getRelativeTime = (utcTime) => {
 
   return calculateRelTime(elapsed);
 };
+
+////////////////////////////
+// Redux helpers
+////////////////////////////
+
+export const getPostPosition = (state, payload) => {
+  return state.findIndex((post) => post.id === payload.id);
+}

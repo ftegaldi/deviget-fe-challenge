@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk, createSelector } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+import { getPostPosition } from '@helpers';
+
 export const loadPosts = createAsyncThunk('posts/loadPosts', async (_, thunkAPI) => {
   try {
     const response = await axios.get('/api/top');
@@ -22,10 +24,12 @@ const postsSlice = createSlice({
   },
   reducers: {
     selectPost: (state, action) => {
+      let position = getPostPosition(state.displayedPosts, action.payload);
       state.selectedPost = action.payload;
+      state.displayedPosts[position].isRead = true;
     },
     dismissPost: (state, action) => {
-      const position = state.displayedPosts.findIndex((post) => post.id === action.payload.id);
+      let position = getPostPosition(state.displayedPosts, action.payload);
       state.dismissedPosts.push(action.payload);
       state.displayedPosts.splice(position, 1);
     },

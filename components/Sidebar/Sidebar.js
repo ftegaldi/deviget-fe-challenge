@@ -16,9 +16,10 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
   const onToggleSidebar = () => {
     dispatch(toggleSidebar());
   };
+
   return (
     <>
-      {isSidebarOpen && (
+      {isSidebarOpen ? (
         <SidebarContainer>
           <TopSection>
             <h1>Reddit Posts</h1>
@@ -37,6 +38,10 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
             <button onClick={onDismissAllPosts}>Dismiss All</button>
           </BottomSection>
         </SidebarContainer>
+      ) : (
+        (
+        <ShowHideButton onClick={onToggleSidebar}>{'>>'}</ShowHideButton>
+      )
       )}
     </>
   );
