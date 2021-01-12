@@ -4,7 +4,10 @@
 
 -- comments
 -design
--link thumbnail
+-link thumbnail (nextjs caveat)
+-sidebar z index
+-media queries and vw calculation
+-postviewr top padding
 
 ### Functionalities / TODO list
 
@@ -19,18 +22,18 @@
     * [x] Dismiss post button
     * [x] Dismiss All button
     * [ ] Support for split layout
-    * [ ] Responsive design
+    * [x] Responsive design
     * [ ] Pagination support
     * [x] Go to full size picture
     * [ ] Saving pictures in picture gallery <--- still not sure about correct functionality
     * [ ] ANIMATIONS 💫
-    * [ ] 404
+    * [ ] 404 ⛔️
   * [ ] API
     * [x] Get top 50 posts
     * [x] Process raw data to be usable for the frontend
-    * [ ] 404
+    * [ ] 404 ⛔️
   * [x] Deploy to vercel △
-  * [ ] Tests
+  * [ ] Tests 🤖
   * [ ] Environment variables
   * [ ] Cleanup 🧹
 

@@ -1,13 +1,36 @@
 import styled from 'styled-components';
 
+import devices from 'styles';
+
 export const SidebarContainer = styled.aside`
-  position: fixed;
   background-color: #dae0e6;
-  width: 20vw;
+  border-right: 1px solid #dae0e6;
   display: flex;
   flex-direction: column;
+  width: 75vw;
+  position: fixed;
   height: 100vh;
-  border-right: 1px solid #dae0e6;
+  z-index: 1;
+
+  @media ${devices.mobileL} {
+    width: 60vw;
+  }
+
+  @media ${devices.tablet} {
+    width: 45vw;
+  }
+
+  @media ${devices.laptop} {
+    width: 30vw;
+  }
+
+  @media ${devices.laptopL} {
+    width: 25vw;
+  }
+
+  @media ${devices.desktop} {
+    width: 20vw;
+  }
 `;
 
 export const TopSection = styled.div`
@@ -27,7 +50,7 @@ export const SidebarBody = styled.div`
   overflow: auto;
   padding: 0 0.5rem;
   flex-grow: 1;
-  border-radius: 4%;
+  // border-radius: 4%;
 `;
 
 export const BottomSection = styled.div`
@@ -58,7 +81,7 @@ export const ShowHideButton = styled.button`
   display: flex;
   align-items: center;
   background: #ffffff;
-  border-radius: ${({ isSidebarOpen }) => (isSidebarOpen ? '10%' : 'none')};
+  border-radius: ${({ isSidebarOpen }) => (isSidebarOpen ? '10%' : '0')};
   cursor: pointer;
 
   :hover {

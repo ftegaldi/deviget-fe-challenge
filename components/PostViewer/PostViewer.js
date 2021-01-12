@@ -4,9 +4,9 @@ import Post from 'components/Post';
 
 import { Container } from './styled';
 
-const PostViewer = ({ selectedPost }) => {
+const PostViewer = ({ selectedPost, isSidebarOpen }) => {
   return (
-    <Container>
+    <Container isSidebarOpen={isSidebarOpen}>
       <Post post={selectedPost} />
     </Container>
   );
@@ -14,6 +14,7 @@ const PostViewer = ({ selectedPost }) => {
 
 const mapStateToProps = (state) => ({
   selectedPost: state.posts.selectedPost,
+  isSidebarOpen: state.settings.isSidebarOpen,
 });
 
 export default connect(mapStateToProps)(PostViewer);

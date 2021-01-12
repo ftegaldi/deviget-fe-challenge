@@ -6,8 +6,9 @@ export default {
       author: 'Anime_Meme_',
       created_at: 1610116038,
       thumbnail: 'https://b.thumbs.redditmedia.com/wcHeW_Tv08zsV8gwRoPhyCUU9yduvDldYWzJq2F86hM.jpg',
-      url: 'https://i.redd.it/1lprd5j4c4a61.jpg',
+      image_src: 'https://i.redd.it/1lprd5j4c4a61.jpg',
       comments: 1605,
+      isRead: false,
     },
     {
       id: 'kt459d',
@@ -16,8 +17,9 @@ export default {
       author: 'primerush',
       created_at: 1610118199,
       thumbnail: 'https://a.thumbs.redditmedia.com/FUM7wd2TPXRhgcuFexv37yNO_S9aSrfhrIajyqgd7K8.jpg',
-      url: 'https://i.redd.it/35adaffji4a61.jpg',
+      image_src: 'https://i.redd.it/35adaffji4a61.jpg',
       comments: 11916,
+      isRead: false,
     },
     {
       id: 'kt7zzg',
@@ -25,8 +27,9 @@ export default {
       author: '42words',
       created_at: 1610129243,
       thumbnail: 'https://b.thumbs.redditmedia.com/gwu2dtIkfhiMQFaaJmVX4La3bKlatBbsm2R6us6yZhI.jpg',
-      url: 'https://i.imgur.com/QYzcf1z.jpg',
+      image_src: 'https://i.imgur.com/QYzcf1z.jpg',
       comments: 2950,
+      isRead: false,
     },
     {
       id: 'kt785i',
@@ -34,9 +37,10 @@ export default {
       author: 'Ketsetri',
       created_at: 1610127075,
       thumbnail: 'https://b.thumbs.redditmedia.com/dyAl4Yvr8IA1MGoEqp3kn_tY867zyTR5muXOng02prM.jpg',
-      url:
+      image_src:
         'https://www.axios.com/reddit-bans-rdonaldtrump-subreddit-ff1da2de-37ab-49cf-afbd-2012f806959e.html',
       comments: 9649,
+      isRead: false,
     },
     {
       id: 'ktenem',
@@ -44,9 +48,10 @@ export default {
       author: 'Urf_Hates_You',
       created_at: 1610148532,
       thumbnail: 'default',
-      url:
+      image_src:
         'https://www.cnbc.com/2021/01/08/twitter-permanently-suspends-trumps-account.html?__source=iosappshare%7Ccom.apple.UIKit.activity.Message',
       comments: 11073,
+      isRead: false,
     },
     {
       id: 'kt3t0f',
@@ -55,8 +60,9 @@ export default {
       author: 'PlantTreesEveryday',
       created_at: 1610117115,
       thumbnail: 'https://a.thumbs.redditmedia.com/22qyf5CTTQUJMeipYYXEnN0bhzepuNU4dpFMKdZMV30.jpg',
-      url: 'https://i.imgur.com/Dvf57NH.jpg',
+      image_src: 'https://i.imgur.com/Dvf57NH.jpg',
       comments: 1922,
+      isRead: false,
     },
     {
       id: 'kszsn6',
@@ -65,8 +71,9 @@ export default {
       author: 'QueenJamilla',
       created_at: 1610101227,
       thumbnail: 'https://a.thumbs.redditmedia.com/a7CuLzJd8MPe1HmVpvVrIRA6opwu2ueX70f-NvjvQL0.jpg',
-      url: 'https://v.redd.it/9o70f1f043a61',
+      image_src: 'https://v.redd.it/9o70f1f043a61',
       comments: 2149,
+      isRead: false,
     },
     {
       id: 'kt8ab2',
@@ -74,8 +81,9 @@ export default {
       author: 'Cerebrum77',
       created_at: 1610130046,
       thumbnail: 'https://a.thumbs.redditmedia.com/Hn1tZxhIVZ6UskOBog2bGCv0QYCRnNxrOlk-Z_NTTi4.jpg',
-      url: 'https://v.redd.it/2m7k8r0qh5a61',
+      image_src: 'https://v.redd.it/2m7k8r0qh5a61',
       comments: 709,
+      isRead: false,
     },
     {
       id: 'ktbcmu',
@@ -83,8 +91,9 @@ export default {
       author: 'PeteTheCameraman',
       created_at: 1610138712,
       thumbnail: 'https://b.thumbs.redditmedia.com/D08LsNctaz0rkQSxO5rgy1pxAFej5E5RQeVzK85XKEs.jpg',
-      url: 'https://i.redd.it/i66w3fvf76a61.jpg',
+      image_src: 'https://i.redd.it/i66w3fvf76a61.jpg',
       comments: 5096,
+      isRead: false,
     },
     {
       id: 'kt0xt7',
@@ -92,8 +101,9 @@ export default {
       author: 'regian24',
       created_at: 1610106500,
       thumbnail: 'https://b.thumbs.redditmedia.com/-An8EEiJYhk5o7_HjzHuXZn4CBurE3wRkS9q3YCop8c.jpg',
-      url: 'https://i.redd.it/bwt6vynqj3a61.png',
+      image_src: 'https://i.redd.it/bwt6vynqj3a61.png',
       comments: 735,
+      isRead: false,
     },
     {
       id: 'ksywoy',
@@ -101,8 +111,9 @@ export default {
       author: 'RichRaichu5',
       created_at: 1610096838,
       thumbnail: 'https://b.thumbs.redditmedia.com/-Qj4KITn6Zij4I2ovVhpkSXP-QzMdUh1w7Wb8ysfCUo.jpg',
-      url: 'https://i.redd.it/mkybmpizq2a61.gif',
+      image_src: 'https://i.redd.it/mkybmpizq2a61.gif',
       comments: 488,
+      isRead: false,
     },
     {
       id: 'ktcm0h',
@@ -110,8 +121,9 @@ export default {
       author: 'No-Caterpillar5168',
       created_at: 1610142412,
       thumbnail: 'https://b.thumbs.redditmedia.com/1UUycyGJYk8gH6wPVzuq8S4oRvxWcc3cZHgVkmH-5EM.jpg',
-      url: 'https://i.redd.it/pjzcv5cji6a61.jpg',
+      image_src: 'https://i.redd.it/pjzcv5cji6a61.jpg',
       comments: 698,
+      isRead: false,
     },
     {
       id: 'kt0ki2',
@@ -119,8 +131,9 @@ export default {
       author: 'warmachine237',
       created_at: 1610104882,
       thumbnail: 'https://b.thumbs.redditmedia.com/Ve1236GvDZmK3Kgh-F5USoP3H0GgiTs_9STgHkdFDAY.jpg',
-      url: 'https://i.redd.it/pua56bixe3a61.png',
+      image_src: 'https://i.redd.it/pua56bixe3a61.png',
       comments: 576,
+      isRead: false,
     },
     {
       id: 'ksyzs8',
@@ -128,8 +141,9 @@ export default {
       author: 'EnkelALB',
       created_at: 1610097262,
       thumbnail: 'https://b.thumbs.redditmedia.com/Uwc9odOC7OHiRf0kMI___cyfD20FXrg0Abtp8xJkInM.jpg',
-      url: 'https://i.redd.it/mhj4167as2a61.gif',
+      image_src: 'https://i.redd.it/mhj4167as2a61.gif',
       comments: 875,
+      isRead: false,
     },
     {
       id: 'kt9yy6',
@@ -137,8 +151,9 @@ export default {
       author: 'lynnsnow18',
       created_at: 1610134782,
       thumbnail: 'https://a.thumbs.redditmedia.com/SgdvdaSQ3-PDt09fjQ34dJcU__clKyQ3X2Hx2RKC4C8.jpg',
-      url: 'https://i.redd.it/e840tczuv5a61.jpg',
+      image_src: 'https://i.redd.it/e840tczuv5a61.jpg',
       comments: 384,
+      isRead: false,
     },
     {
       id: 'kt1srz',
@@ -146,8 +161,9 @@ export default {
       author: 'Sno_Jon',
       created_at: 1610110033,
       thumbnail: 'https://b.thumbs.redditmedia.com/V87-ER2zBXNlBJ0P9LpIaO0OVFJW1RgqwMlvXQ_pq_s.jpg',
-      url: 'https://v.redd.it/ke4gbb68u3a61',
+      image_src: 'https://v.redd.it/ke4gbb68u3a61',
       comments: 6121,
+      isRead: false,
     },
     {
       id: 'kt1k8h',
@@ -155,8 +171,9 @@ export default {
       author: 'crasshumor',
       created_at: 1610109067,
       thumbnail: 'https://b.thumbs.redditmedia.com/a9XYFcxgHNOqmE6xrVmt_yTS9E1dqjbcXhDtT1NuEXY.jpg',
-      url: 'https://i.redd.it/eg9se38er3a61.jpg',
+      image_src: 'https://i.redd.it/eg9se38er3a61.jpg',
       comments: 970,
+      isRead: false,
     },
     {
       id: 'ktfej3',
@@ -164,8 +181,9 @@ export default {
       author: '666FuCkThEwOrLd666',
       created_at: 1610150782,
       thumbnail: 'https://b.thumbs.redditmedia.com/LV185NL3jkKxhxEHXhdqIE6gTkNYuDzoffXO69bLuAE.jpg',
-      url: 'https://i.redd.it/sn59i1qf77a61.jpg',
+      image_src: 'https://i.redd.it/sn59i1qf77a61.jpg',
       comments: 2323,
+      isRead: false,
     },
     {
       id: 'kt3r2s',
@@ -173,8 +191,9 @@ export default {
       author: '666FuCkThEwOrLd666',
       created_at: 1610116952,
       thumbnail: 'https://b.thumbs.redditmedia.com/q0_xH8udJzwwHma8-eQB4mIZjuECd4eVOTlHTtQTgEI.jpg',
-      url: 'https://i.redd.it/j9yevobue4a61.jpg',
+      image_src: 'https://i.redd.it/j9yevobue4a61.jpg',
       comments: 1182,
+      isRead: false,
     },
     {
       id: 'kt1p7j',
@@ -182,8 +201,9 @@ export default {
       author: 'Nykholas',
       created_at: 1610109616,
       thumbnail: 'https://b.thumbs.redditmedia.com/-qm2YHykf41Z4pNWPhmPeECor5OhNmvh0nzIF6N-3Yc.jpg',
-      url: 'https://i.redd.it/zg2ui321t3a61.jpg',
+      image_src: 'https://i.redd.it/zg2ui321t3a61.jpg',
       comments: 536,
+      isRead: false,
     },
     {
       id: 'kt0oq9',
@@ -191,8 +211,9 @@ export default {
       author: 'rgatoNacho',
       created_at: 1610105365,
       thumbnail: 'https://b.thumbs.redditmedia.com/jIW2IeSelS0pbkZ6Ddy1x7q4UF9CZl6cR9rYm9VqOFU.jpg',
-      url: 'https://i.redd.it/d51xd6sdg3a61.jpg',
+      image_src: 'https://i.redd.it/d51xd6sdg3a61.jpg',
       comments: 2684,
+      isRead: false,
     },
     {
       id: 'kt6r94',
@@ -200,8 +221,10 @@ export default {
       author: 'idarknight',
       created_at: 1610125775,
       thumbnail: 'default',
-      url: 'https://www.cbc.ca/news/politics/riots-washington-capitol-hill-trudeau-trump-1.5866237',
+      image_src:
+        'https://www.cbc.ca/news/politics/riots-washington-capitol-hill-trudeau-trump-1.5866237',
       comments: 3997,
+      isRead: false,
     },
     {
       id: 'kt6x2c',
@@ -209,8 +232,9 @@ export default {
       author: 'juntawflo',
       created_at: 1610126215,
       thumbnail: 'https://b.thumbs.redditmedia.com/R1BGOBFctS9ILLKXHR2DGz7GmTS0GHnr19beCOiNetI.jpg',
-      url: 'https://v.redd.it/io3vkc3665a61',
+      image_src: 'https://v.redd.it/io3vkc3665a61',
       comments: 4566,
+      isRead: false,
     },
     {
       id: 'kteyie',
@@ -218,9 +242,10 @@ export default {
       author: 'PoliticsModeratorBot',
       created_at: 1610149418,
       thumbnail: 'self',
-      url:
+      image_src:
         'https://www.reddit.com/r/politics/comments/kteyie/megathread_twitter_permanently_suspends/',
       comments: 35588,
+      isRead: false,
     },
     {
       id: 'kt3dbn',
@@ -228,8 +253,9 @@ export default {
       author: 'cottagecow',
       created_at: 1610115724,
       thumbnail: 'https://b.thumbs.redditmedia.com/R-YirC-n_nCnvLJgDNR5ufVldArlhqMUPYaDXY7enYU.jpg',
-      url: 'https://v.redd.it/onpz0j66b4a61',
+      image_src: 'https://v.redd.it/onpz0j66b4a61',
       comments: 7638,
+      isRead: false,
     },
     {
       id: 'kt07ng',
@@ -237,8 +263,9 @@ export default {
       author: 'karmyou',
       created_at: 1610103292,
       thumbnail: 'https://b.thumbs.redditmedia.com/jpNEuLF_nzgMv8zdXBa6BzOOYYVToVd9xY-ysSRAjHg.jpg',
-      url: 'https://v.redd.it/4avsfky6a3a61',
+      image_src: 'https://v.redd.it/4avsfky6a3a61',
       comments: 630,
+      isRead: false,
     },
     {
       id: 'kt0ks4',
@@ -247,9 +274,10 @@ export default {
       author: 'Professor_Abronsius',
       created_at: 1610104907,
       thumbnail: 'https://a.thumbs.redditmedia.com/t-5KOtTg-7wCy_IZGFNiE2F4eAUGnz8T7W_wDH81dk0.jpg',
-      url:
+      image_src:
         'https://theweek.com/speedreads/959671/maryland-governor-said-repeatedly-denied-authorization-send-national-guard-dc',
       comments: 3938,
+      isRead: false,
     },
     {
       id: 'kt5upz',
@@ -257,8 +285,9 @@ export default {
       author: 'Dank_meme_abuser420',
       created_at: 1610123206,
       thumbnail: 'https://b.thumbs.redditmedia.com/RkbPej52XHR1etP1kQcpYKs6p0Y7oGk7l0b5edBukpI.jpg',
-      url: 'https://i.redd.it/7jsr3rqfx4a61.jpg',
+      image_src: 'https://i.redd.it/7jsr3rqfx4a61.jpg',
       comments: 1651,
+      isRead: false,
     },
     {
       id: 'kt8nx8',
@@ -266,8 +295,9 @@ export default {
       author: 'klawdz',
       created_at: 1610131121,
       thumbnail: 'default',
-      url: 'https://www.nbcnews.com/news/amp/ncna1253490',
+      image_src: 'https://www.nbcnews.com/news/amp/ncna1253490',
       comments: 5114,
+      isRead: false,
     },
     {
       id: 'kt8npm',
@@ -275,8 +305,9 @@ export default {
       author: 'klawdz',
       created_at: 1610131105,
       thumbnail: 'https://b.thumbs.redditmedia.com/AnE3IHq6VzH0Yk8qSGKmsRBvyDysBlFGaPEzvgEC4Pg.jpg',
-      url: 'https://www.nbcnews.com/news/amp/ncna1253490',
+      image_src: 'https://www.nbcnews.com/news/amp/ncna1253490',
       comments: 6048,
+      isRead: false,
     },
     {
       id: 'kta4vi',
@@ -284,8 +315,9 @@ export default {
       author: 'dumitch',
       created_at: 1610135262,
       thumbnail: 'https://b.thumbs.redditmedia.com/PhWFYGwGB49SIeQ3enkjODOjQc-EADO3rGCyKbTquts.jpg',
-      url: 'https://i.redd.it/1q01qy9ax5a61.jpg',
+      image_src: 'https://i.redd.it/1q01qy9ax5a61.jpg',
       comments: 2719,
+      isRead: false,
     },
     {
       id: 'kt43ms',
@@ -293,9 +325,10 @@ export default {
       author: 'Bunnes68',
       created_at: 1610118067,
       thumbnail: 'https://b.thumbs.redditmedia.com/jJjkmImbrSKlklRC_3DbcNDtVKoYdefzkr9HQNQnLcY.jpg',
-      url:
+      image_src:
         'https://thehill.com/homenews/house/533312-pelosi-orders-flags-at-half-staff-for-capitol-hill-officer-that-died',
       comments: 4719,
+      isRead: false,
     },
     {
       id: 'ksz1q7',
@@ -303,8 +336,9 @@ export default {
       author: 'Adaffor',
       created_at: 1610097542,
       thumbnail: 'https://a.thumbs.redditmedia.com/F-zYGtKs3jalmJdo-0WuSZ1iQ1eCfYJDuTOTLaQVsY4.jpg',
-      url: 'https://v.redd.it/0gloass2t2a61',
+      image_src: 'https://v.redd.it/0gloass2t2a61',
       comments: 639,
+      isRead: false,
     },
     {
       id: 'ksw0mj',
@@ -312,9 +346,10 @@ export default {
       author: 'ADotSapiens',
       created_at: 1610083636,
       thumbnail: 'default',
-      url:
+      image_src:
         'https://www.tampafp.com/fbi-50000-reward-for-info-on-suspected-pipe-bomber-at-u-s-capitol/',
       comments: 4500,
+      isRead: false,
     },
     {
       id: 'kt5s3h',
@@ -322,8 +357,9 @@ export default {
       author: 'Apbitey',
       created_at: 1610122983,
       thumbnail: 'https://b.thumbs.redditmedia.com/QTZYJtA7dQEGMNqoIlzn1HioXyHpq9LzsFxoUWGg8eE.jpg',
-      url: 'https://i.redd.it/ifx85zzrw4a61.jpg',
+      image_src: 'https://i.redd.it/ifx85zzrw4a61.jpg',
       comments: 416,
+      isRead: false,
     },
     {
       id: 'ktai6b',
@@ -331,8 +367,9 @@ export default {
       author: 'crupnick',
       created_at: 1610136303,
       thumbnail: 'https://b.thumbs.redditmedia.com/MjUXy_Kv8yfZy2pFbQDJ1cC48S9aIESVQrcqtcbrXXk.jpg',
-      url: 'https://i.redd.it/qb8btisd06a61.jpg',
+      image_src: 'https://i.redd.it/qb8btisd06a61.jpg',
       comments: 1130,
+      isRead: false,
     },
     {
       id: 'kt2ovn',
@@ -340,8 +377,9 @@ export default {
       author: 'lezullee',
       created_at: 1610113473,
       thumbnail: 'https://b.thumbs.redditmedia.com/LRx7T7-ZIAfMPSgksytnCgmqIGbYBdPS2E--XPqNRho.jpg',
-      url: 'https://v.redd.it/eh9zew7h44a61',
+      image_src: 'https://v.redd.it/eh9zew7h44a61',
       comments: 2150,
+      isRead: false,
     },
     {
       id: 'kt5x4c',
@@ -349,8 +387,9 @@ export default {
       author: 'duccati',
       created_at: 1610123404,
       thumbnail: 'https://b.thumbs.redditmedia.com/Ty1upaIdFcqfwcztOBoUUk2fdV8JaKV1xF4dv6fgblE.jpg',
-      url: 'https://i.redd.it/gd7f8r0kx4a61.png',
+      image_src: 'https://i.redd.it/gd7f8r0kx4a61.png',
       comments: 595,
+      isRead: false,
     },
     {
       id: 'ktczfp',
@@ -358,8 +397,9 @@ export default {
       author: 'NourEhsan',
       created_at: 1610143504,
       thumbnail: 'https://b.thumbs.redditmedia.com/yf_kdkPBJ1mgqo03fLMIvhJnQ9pnwY_cqNUQFAdQuiQ.jpg',
-      url: 'https://i.redd.it/cb03p0pml6a61.png',
+      image_src: 'https://i.redd.it/cb03p0pml6a61.png',
       comments: 4346,
+      isRead: false,
     },
     {
       id: 'kt0cdl',
@@ -368,9 +408,10 @@ export default {
       author: 'luisgustavo-',
       created_at: 1610103856,
       thumbnail: 'default',
-      url:
+      image_src:
         'https://www.cbsnews.com/news/soho-karen-arrested-miya-ponsetto-falsely-said-black-teen-stole-her-phone-nyc-hotel/',
       comments: 3732,
+      isRead: false,
     },
     {
       id: 'kt9e6w',
@@ -378,8 +419,9 @@ export default {
       author: 'oj_a_s',
       created_at: 1610133178,
       thumbnail: 'https://b.thumbs.redditmedia.com/_opH4Q1mGWxHbYuGLPdc-qNHjf9KMuagNOj9tjk-Ufo.jpg',
-      url: 'https://i.redd.it/igkoavo2r5a61.png',
+      image_src: 'https://i.redd.it/igkoavo2r5a61.png',
       comments: 446,
+      isRead: false,
     },
     {
       id: 'ktbltg',
@@ -387,8 +429,9 @@ export default {
       author: 'txhrow1',
       created_at: 1610139464,
       thumbnail: 'https://b.thumbs.redditmedia.com/llIrB7kPXkEGQWvHJWeUrNc6-oGHLBNgCAMwj9gDckk.jpg',
-      url: 'https://i.redd.it/evkuyinq96a61.png',
+      image_src: 'https://i.redd.it/evkuyinq96a61.png',
       comments: 1025,
+      isRead: false,
     },
     {
       id: 'kt019r',
@@ -396,8 +439,9 @@ export default {
       author: 'Un4given111',
       created_at: 1610102419,
       thumbnail: 'https://b.thumbs.redditmedia.com/2ql9LlgLpSZFNFTynIKu8GxS01n4mezF683A5QxFwDI.jpg',
-      url: 'https://i.imgur.com/NfpEz9J.jpeg',
+      image_src: 'https://i.imgur.com/NfpEz9J.jpeg',
       comments: 1003,
+      isRead: false,
     },
     {
       id: 'kt5pem',
@@ -405,8 +449,9 @@ export default {
       author: 'SolivagantPanda',
       created_at: 1610122761,
       thumbnail: 'https://b.thumbs.redditmedia.com/ILe-SNwBDl2aCNBL9PndR0gADqQfDcRwMzo4LUdgDSY.jpg',
-      url: 'https://i.imgur.com/yBSzJGm.png',
+      image_src: 'https://i.imgur.com/yBSzJGm.png',
       comments: 348,
+      isRead: false,
     },
     {
       id: 'kt1iww',
@@ -414,8 +459,9 @@ export default {
       author: 'SeeThroughCanoe',
       created_at: 1610108920,
       thumbnail: 'https://b.thumbs.redditmedia.com/68v8ZObTvvlSrdwzbP7z8iUtR7s3_IJFajd_mDZMN2E.jpg',
-      url: 'https://i.imgur.com/dvUfd4w.gifv',
+      image_src: 'https://i.imgur.com/dvUfd4w.gifv',
       comments: 1869,
+      isRead: false,
     },
     {
       id: 'ktec0z',
@@ -423,8 +469,9 @@ export default {
       author: 'afrorob',
       created_at: 1610147559,
       thumbnail: 'https://b.thumbs.redditmedia.com/VYGXf4kPqxTJK3BvwabM1f1ZwkNiuGW07XgqR4d0iYM.jpg',
-      url: 'https://i.redd.it/u0l9grmux6a61.jpg',
+      image_src: 'https://i.redd.it/u0l9grmux6a61.jpg',
       comments: 207,
+      isRead: false,
     },
     {
       id: 'kt6hb8',
@@ -432,9 +479,10 @@ export default {
       author: 'WhispersOfFear',
       created_at: 1610125040,
       thumbnail: 'https://b.thumbs.redditmedia.com/zSXsAoWuvDDozmOrOMKk94pRd_C2feqQPbYwlr_DybI.jpg',
-      url:
+      image_src:
         'https://www.independent.co.uk/news/world/americas/us-election-2020/pelosi-trump-riot-war-nuclear-weapons-b1784580.html',
       comments: 3511,
+      isRead: false,
     },
     {
       id: 'ktgpaw',
@@ -443,9 +491,10 @@ export default {
       author: 'Bakedschwarzenbach',
       created_at: 1610155136,
       thumbnail: 'https://b.thumbs.redditmedia.com/89xmaAd-CHAqrVAVfa9yfTa4XQiuEJDuNRycHhRImUk.jpg',
-      url:
+      image_src:
         'https://www.commondreams.org/news/2021/01/08/why-impeach-trump-late-date-one-word-says-bernie-sanders-precedent',
       comments: 2117,
+      isRead: false,
     },
     {
       id: 'kt1325',
@@ -454,9 +503,10 @@ export default {
       author: 'TJ_SP',
       created_at: 1610107107,
       thumbnail: 'https://b.thumbs.redditmedia.com/Mk4_uIHzigDzq8cnnijjLX_qgezhBEHnNVQ50zuurYU.jpg',
-      url:
+      image_src:
         'https://www.businessinsider.com/trump-denounced-capital-rioters-after-realizing-legal-risk-report-2021-1',
       comments: 4334,
+      isRead: false,
     },
     {
       id: 'kt4k8z',
@@ -464,8 +514,9 @@ export default {
       author: '2dubs1bro',
       created_at: 1610119405,
       thumbnail: 'https://b.thumbs.redditmedia.com/7jhWTK-k3Fr8QuxI7LaZnuGAtVdV-wkBRy5Q8MqvE1Y.jpg',
-      url: 'https://v.redd.it/58q7oo5ql4a61',
+      image_src: 'https://v.redd.it/58q7oo5ql4a61',
       comments: 892,
+      isRead: false,
     },
   ],
 };

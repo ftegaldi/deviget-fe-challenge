@@ -1,5 +1,5 @@
 import { connect, useDispatch } from 'react-redux';
-import { dismissAllPosts } from '@slices/postsSlice';
+import { dismissAllPosts, selectPosts } from '@slices/postsSlice';
 import { toggleSidebar } from '@slices/settingsSlice';
 
 import PostCard from 'components/PostCard';
@@ -28,31 +28,28 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
             </ShowHideButton>
           </TopSection>
           <SidebarBody>
-            {displayedPosts.length ? (
-              displayedPosts.map((post, index) => (
-                <PostCard
-                  key={post.id}
-                  postData={post}
-                  lastCard={index === displayedPosts.length - 1 ? false : true}
-                />
-              ))) : (
-                'loading...')
-            }
+            {displayedPosts.length
+              ? displayedPosts.map((post, index) => (
+                  <PostCard
+                    key={post.id}
+                    postData={post}
+                    lastCard={index === displayedPosts.length - 1 ? false : true}
+                  />
+                ))
+              : 'loading...'}
           </SidebarBody>
           <BottomSection>
             <button onClick={onDismissAllPosts}>Dismiss All</button>
           </BottomSection>
         </SidebarContainer>
       ) : (
-        (
         <ShowHideButton isSidebarOpen={isSidebarOpen} onClick={onToggleSidebar}>
           <span class="material-icons">view_list</span>
         </ShowHideButton>
-      )
       )}
     </>
   );
-};
+};;
 
 const mapStateToProps = (state) => ({
   displayedPosts: state.posts.displayedPosts,

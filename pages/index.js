@@ -1,5 +1,4 @@
-import styles from '../styles/Home.module.css';
-import Sidebar from 'components/Sidebar'
+import Sidebar from 'components/Sidebar';
 import PostViewer from 'components/PostViewer'
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,7 +15,7 @@ const RedditTopPostsHome = () => {
   }, [dispatch]);
 
   return (
-    <main className={styles.layout}>
+    <main>
       <Sidebar />
       <PostViewer />
     </main>

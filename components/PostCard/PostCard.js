@@ -3,17 +3,24 @@ import Image from 'next/image'
 import { useDispatch } from 'react-redux';
 
 import { selectPost, dismissPost } from '@slices/postsSlice';
+import { toggleSidebar } from '@slices/settingsSlice';
 
-import { getRelativeTime } from '@helpers';
+import { CardContainer, DismissButton, MiddleSection, BottomSection } from './styled';
 
-import { CardContainer, ReadIndicator, DismissButton, TopSection, MiddleSection, BottomSection } from './styled';
+import { useWindowSize } from '@helpers';
+
+import TopSection from './TopSection';
 
 const PostCard = ({ postData, lastCard }) => {
-  const { id, title, author, created_at, thumbnail, comments, isRead } = postData;
+  const { title, author, created_at, thumbnail, comments, isRead } = postData;
   const dispatch = useDispatch();
+  const { width } = useWindowSize();
 
   const onSelectPost = () => {
     dispatch(selectPost(postData));
+    if (width <= 768) {
+      dispatch(toggleSidebar());
+    }
   };
 
   const onDismissPost = () => {
@@ -22,19 +29,13 @@ const PostCard = ({ postData, lastCard }) => {
 
   return (
     <CardContainer lastCard={lastCard}>
-      <TopSection>
-        <ReadIndicator isRead={isRead}>
-            <span class="material-icons">new_releases</span>
-        </ReadIndicator>
-        <h2>{author}</h2>
-        <p>{getRelativeTime(created_at)}</p>
-      </TopSection>
+      <TopSection isRead={isRead} author={author} created_at={created_at} viewportWidth={width} />
       <MiddleSection onClick={onSelectPost}>
         {thumbnail === 'default' ? (
-          <Image src={'/link-thumb.png'} width='200' height='139' />
-          ) : (
-            <img src={thumbnail} />
-          )}
+          <Image src={'/link-thumb.png'} width="200" height="139" />
+        ) : (
+          <img src={thumbnail} />
+        )}
         <h3>{title}</h3>
         <span class="material-icons">arrow_forward_ios</span>
       </MiddleSection>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import devices from 'styles';
 
 export const CardContainer = styled.article`
   background-color: #ffffff;
@@ -9,18 +10,36 @@ export const CardContainer = styled.article`
   border-radius: 0.5rem;
 `;
 
-export const TopSection = styled.div`
+export const TopSectionContainer = styled.div`
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+
   h2 {
     font-weight: 400;
     padding-left: 0.3rem;
+    flex-grow: 1;
+    font-size: 1.2em;
   }
-
+  
   p {
     flex-grow: 1;
-    text-align: end;
+    text-align: start;
+    padding-left: 0.3rem;
+  }
+
+  @media ${devices.tablet} {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.5em;
+    }
+    
+    p {
+      text-align: end;
+    }
   }
 `;
 
@@ -35,12 +54,25 @@ export const MiddleSection = styled.div`
   }
 
   h3 {
-    width: auto;
     padding: 0 0.3rem;
+    width: 40%;
+    word-wrap: break-word;
   }
-
+  
   span {
     margin-left: auto;
+  }
+
+  @media ${devices.tablet} {
+    h3 {
+      width: auto;
+    }
+  }
+
+  @media ${devices.desktop} {
+    h3 {
+      width: auto;
+    }
   }
 `;
 
@@ -78,11 +110,22 @@ export const DismissButton = styled.button`
   color: #ffffff;
   cursor: pointer;
 
+  @media ${devices.mobileM} {
+    padding: 0.1rem;
+    width: 50%;
+
+  }
+  
   :hover {
     background-color: #33a8ff;
   }
 
-  // p {
-  //   padding-left: 0.5rem;
-  // }
+  @media ${devices.desktop} {
+    padding: 0;
+    width: 40%;
+
+    p {
+      padding-left: 0.5rem;
+    }
+  }
 `;
