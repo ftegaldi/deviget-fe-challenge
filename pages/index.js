@@ -11,7 +11,12 @@ const RedditTopPostsHome = () => {
     async function dispatchLoadPosts() {
       await dispatch(loadPosts());
     }
-    dispatchLoadPosts();
+    //there might be a cleaner way of doing this...
+    if (localStorage.getItem('state')) {
+      return;
+    } else {
+      dispatchLoadPosts();
+    }
   }, [dispatch]);
 
   return (

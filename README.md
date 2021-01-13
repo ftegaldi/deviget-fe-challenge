@@ -8,6 +8,8 @@
 -sidebar z index
 -media queries and vw calculation
 -postviewr top padding
+-sidebar swipe
+-lodash throttle?
 
 ### Functionalities / TODO list
 
@@ -16,12 +18,12 @@
     * [x] Basic components
     * [x] Finish styling
     * [x] App state implementation
-    * [ ] App state preservation
-    * [ ] App state restoration
+    * [x] App state preservation
+    * [x] App state restoration
     * [x] Indicator of unread/read post
     * [x] Dismiss post button
     * [x] Dismiss All button
-    * [ ] Support for split layout
+    * [x] Support for split layout
     * [x] Responsive design
     * [ ] Pagination support
     * [x] Go to full size picture

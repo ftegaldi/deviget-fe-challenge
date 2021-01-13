@@ -10,9 +10,10 @@ import { CardContainer, DismissButton, MiddleSection, BottomSection } from './st
 import { useWindowSize } from '@helpers';
 
 import TopSection from './TopSection';
+import image from 'next/image';
 
 const PostCard = ({ postData, lastCard }) => {
-  const { title, author, created_at, thumbnail, comments, isRead } = postData;
+  const { title, author, created_at, thumbnail, comments, isRead, image_src } = postData;
   const dispatch = useDispatch();
   const { width } = useWindowSize();
 
@@ -34,7 +35,7 @@ const PostCard = ({ postData, lastCard }) => {
         {thumbnail === 'default' ? (
           <Image src={'/link-thumb.png'} width="200" height="139" />
         ) : (
-          <img src={thumbnail} />
+          <img src={thumbnail === 'nsfw' ? image_src : thumbnail} />
         )}
         <h3>{title}</h3>
         <span class="material-icons">arrow_forward_ios</span>

@@ -52,12 +52,33 @@ export const getRelativeTime = (utcTime) => {
 };
 
 ////////////////////////////
-// Redux helpers
+// Redux/state helpers
 ////////////////////////////
 
 export const getPostPosition = (state, payload) => {
   return state.findIndex((post) => post.id === payload.id);
 }
+
+export const loadState = () => {
+  try {
+    const serializedSavedState = localStorage.getItem('state');
+    if (serializedSavedState === null) {
+      return undefined;
+    }
+    return JSON.parse(serializedSavedState);
+  } catch (error) {
+    return undefined;
+  }
+};
+
+export const saveState = (state) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem('state', serializedState);
+  } catch (error) {
+    console.error('error saving state to localstorage --> ', error);
+  }
+};
 
 ////////////////////////////
 // Custom Hooks

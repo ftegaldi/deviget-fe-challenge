@@ -2,13 +2,10 @@
 const axios = require('axios');
 const { processTopPostsData } = require('@helpers');
 
-import mockedPosts from 'mock/mockedData';
-
 const getTopPosts = async () => {
   try {
-    // let res = await axios.get('https://reddit.com/top.json?limit=50');
-    // return res.data;
-    return mockedPosts;
+    let res = await axios.get('https://reddit.com/top.json?limit=50');
+    return res.data;
   } catch (error) {
     console.error(error);
   }
@@ -16,10 +13,9 @@ const getTopPosts = async () => {
 
 export default async (req, res) => {
   try {
-    // let posts = await getTopPosts();
-    // let processedPosts = processTopPostsData(posts);
-    // res.status(200).json({ processedPosts });
-    res.status(200).json(mockedPosts);
+    let posts = await getTopPosts();
+    let processedPosts = processTopPostsData(posts);
+    res.status(200).json({ processedPosts });
   } catch (error) {
     res.status(500).json({ error });
   }
