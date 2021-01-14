@@ -30,12 +30,17 @@ const postsSlice = createSlice({
     },
     dismissPost: (state, action) => {
       let position = getPostPosition(state.displayedPosts, action.payload);
-      state.dismissedPosts.push({ ...action.payload, isDisplayedInSidebar: false });
+      state.dismissedPosts.push({  ...action.payload, lastPosition: position  });
       state.displayedPosts.splice(position, 1);
     },
     dismissAllPosts: (state) => {
       state.posts.map((post) => (post.isDisplayed = false));
       state.displayedPosts = [];
+    },
+    undoDismissPost: (state) => {
+      if (!state.dismissedPosts.length) return;
+      let dismissedPost = state.dismissedPosts.pop();
+      state.displayedPosts.splice(dismissedPost.lastPosition, 0, dismissedPost)
     },
   },
   extraReducers: {
@@ -55,7 +60,7 @@ const postsSlice = createSlice({
   },
 });
 
-export const { selectPost, dismissPost, dismissAllPosts } = postsSlice.actions;
+export const { selectPost, dismissPost, dismissAllPosts, undoDismissPost } = postsSlice.actions;
 
 export const selectPosts = createSelector(
   (state) => ({

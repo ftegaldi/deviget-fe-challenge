@@ -42,7 +42,7 @@
 
 * [ ] Extra
   * [ ] Frontend
-    * [ ] Undo dismiss button
+    * [x] Undo dismiss button
     * [ ] Config menu
       * [ ] Modal
       * [ ] Number of posts

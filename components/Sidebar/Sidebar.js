@@ -8,6 +8,7 @@ import { useSpring, useTransition, config } from 'react-spring';
 import ToggleSidebarButton from 'components/ToggleSidebarButton';
 import { useEffect } from 'react';
 import { CardContainer } from 'components/PostCard/styled';
+import UndoDismissButton from 'components/UndoDismissButton/UndoDismissButton';
 
 
 const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
@@ -23,29 +24,32 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
     leave: { transform: 'translate3d(-100%,0,0)' },
   })
 
-  return sidebarTransition.map(({item, key, props}) => (
-    item &&
-    <SidebarContainer style={props} key={key}>
-      <TopSection>
-        <h1>Reddit Posts</h1>
-        <ToggleSidebarButton icon='close'/>
-      </TopSection>
-      <SidebarBody>
-        {displayedPosts.length
-          ? displayedPosts.map((post, index) => (
-              <PostCard
-                key={post.id}
-                postData={post}
-                lastCard={index === displayedPosts.length - 1 ? false : true}
-              />
-            ))
-          : 'loading...'}
-      </SidebarBody>
-      <BottomSection>
-        <button onClick={onDismissAllPosts}>Dismiss All</button>
-      </BottomSection>
-    </SidebarContainer>
-  ))
+  return sidebarTransition.map(
+    ({ item, key, props }) =>
+      item && (
+        <SidebarContainer style={props} key={key}>
+          <TopSection>
+            <h1>Reddit Posts</h1>
+            <UndoDismissButton />
+            <ToggleSidebarButton icon="close" isInSidebar />
+          </TopSection>
+          <SidebarBody>
+            {displayedPosts.length
+              ? displayedPosts.map((post, index) => (
+                  <PostCard
+                    key={post.id}
+                    postData={post}
+                    lastCard={index === displayedPosts.length - 1 ? false : true}
+                  />
+                ))
+              : 'loading...'}
+          </SidebarBody>
+          <BottomSection>
+            <button onClick={onDismissAllPosts}>Dismiss All</button>
+          </BottomSection>
+        </SidebarContainer>
+      )
+  );
 };
 
 const mapStateToProps = (state) => ({

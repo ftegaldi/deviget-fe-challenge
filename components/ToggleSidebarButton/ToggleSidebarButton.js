@@ -6,7 +6,7 @@ import { ShowHideButton } from './styled';
 //icons:
 // on sidebar: close
 // outside sidebar: view_list
-const ToggleSidebarButton = ({ icon }) => {
+const ToggleSidebarButton = ({ icon, isInSidebar }) => {
   const dispatch = useDispatch();
 
   const toggleSidebarVisibility = () => {
@@ -14,7 +14,7 @@ const ToggleSidebarButton = ({ icon }) => {
   };
 
   return (
-    <ShowHideButton onClick={toggleSidebarVisibility}>
+    <ShowHideButton onClick={toggleSidebarVisibility} isInSidebar={isInSidebar}>
       <span class="material-icons">{icon}</span>
     </ShowHideButton>
   );

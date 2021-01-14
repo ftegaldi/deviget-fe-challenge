@@ -16,7 +16,9 @@ const store = configureStore({
 });
 
 store.subscribe(() => {
-  saveState(store.getState());
+  saveState({
+    posts: store.getState().posts,
+  });
 });
 
 export default store;

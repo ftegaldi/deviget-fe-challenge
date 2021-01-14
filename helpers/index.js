@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 ////////////////////////////
 
 export const processTopPostsData = (responseData) => {
-  return responseData.data.children.map((post) => {
+  return responseData.data.children.map((post, index) => {
     return {
       id: post.data.id,
       title: post.data.title,
