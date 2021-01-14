@@ -30,10 +30,11 @@ const postsSlice = createSlice({
     },
     dismissPost: (state, action) => {
       let position = getPostPosition(state.displayedPosts, action.payload);
-      state.dismissedPosts.push(action.payload);
+      state.dismissedPosts.push({ ...action.payload, isDisplayedInSidebar: false });
       state.displayedPosts.splice(position, 1);
     },
     dismissAllPosts: (state) => {
+      state.posts.map((post) => (post.isDisplayed = false));
       state.displayedPosts = [];
     },
   },

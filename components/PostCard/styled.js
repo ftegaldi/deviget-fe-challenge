@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 import devices from 'styles';
 
-export const CardContainer = styled.article`
+export const CardContainer = styled(animated.article)`
   background-color: #ffffff;
   color: #222222;
   padding: 0.3rem;
   font-size: 0.9em;
-  margin-bottom: ${({lastCard}) => (lastCard ? '0.5rem' : null)};
+  margin-bottom: ${({ lastCard }) => (lastCard ? '0.5rem' : null)};
   border-radius: 0.5rem;
+  position: relative;
 `;
 
 export const TopSectionContainer = styled.div`

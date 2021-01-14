@@ -9,7 +9,8 @@
 -media queries and vw calculation
 -postviewr top padding
 -sidebar swipe
--lodash throttle?
+-lodash throttle? (for redux subscribing)
+-check for disappeared post
 
 ### Functionalities / TODO list
 
@@ -28,12 +29,12 @@
     * [ ] Pagination support
     * [x] Go to full size picture
     * [ ] Saving pictures in picture gallery <--- still not sure about correct functionality
-    * [ ] ANIMATIONS 💫
-    * [ ] 404 ⛔️
-  * [ ] API
+    * [x] ANIMATIONS 💫
+    * [x] 404 ⛔️
+  * [x] API
     * [x] Get top 50 posts
     * [x] Process raw data to be usable for the frontend
-    * [ ] 404 ⛔️
+    * [x] 404 ⛔️
   * [x] Deploy to vercel △
   * [ ] Tests 🤖
   * [ ] Environment variables

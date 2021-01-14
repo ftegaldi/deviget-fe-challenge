@@ -18,6 +18,7 @@ export const processTopPostsData = (responseData) => {
       isRead: false,
       isGif: post.data.url.includes('gifv'),
       isExternal: !post.data.url_overridden_by_dest.includes('redd'),
+      isDisplayedInSidebar: true,
     };
   });
 };

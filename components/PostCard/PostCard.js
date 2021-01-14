@@ -10,10 +10,20 @@ import { CardContainer, DismissButton, MiddleSection, BottomSection } from './st
 import { useWindowSize } from '@helpers';
 
 import TopSection from './TopSection';
-import image from 'next/image';
+import image from 'next/image'; // -------------------------------------------------
 
 const PostCard = ({ postData, lastCard }) => {
-  const { title, author, created_at, thumbnail, comments, isRead, image_src } = postData;
+  const {
+    id,
+    title,
+    author,
+    created_at,
+    thumbnail,
+    comments,
+    isRead,
+    image_src,
+    isDisplayedInSidebar,
+  } = postData;
   const dispatch = useDispatch();
   const { width } = useWindowSize();
 

@@ -1,10 +1,14 @@
 import { connect, useDispatch } from 'react-redux';
 import { dismissAllPosts, selectPosts } from '@slices/postsSlice';
-import { toggleSidebar } from '@slices/settingsSlice';
-
 import PostCard from 'components/PostCard';
 
-import { SidebarContainer, TopSection, SidebarBody, BottomSection, ShowHideButton } from './styled';
+import { SidebarContainer, TopSection, SidebarBody, BottomSection } from './styled';
+
+import { useSpring, useTransition, config } from 'react-spring';
+import ToggleSidebarButton from 'components/ToggleSidebarButton';
+import { useEffect } from 'react';
+import { CardContainer } from 'components/PostCard/styled';
+
 
 const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
   const dispatch = useDispatch();
@@ -13,43 +17,36 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
     dispatch(dismissAllPosts());
   };
 
-  const onToggleSidebar = () => {
-    dispatch(toggleSidebar());
-  };
+  const sidebarTransition = useTransition(isSidebarOpen, null, {
+    from: { transform: 'translate3d(-100%, 0 ,0)' },
+    enter: { transform: 'translate3d(0,0,0)' },
+    leave: { transform: 'translate3d(-100%,0,0)' },
+  })
 
-  return (
-    <>
-      {isSidebarOpen ? (
-        <SidebarContainer>
-          <TopSection>
-            <h1>Reddit Posts</h1>
-            <ShowHideButton onClick={onToggleSidebar}>
-              <span class="material-icons">close</span>
-            </ShowHideButton>
-          </TopSection>
-          <SidebarBody>
-            {displayedPosts.length
-              ? displayedPosts.map((post, index) => (
-                  <PostCard
-                    key={post.id}
-                    postData={post}
-                    lastCard={index === displayedPosts.length - 1 ? false : true}
-                  />
-                ))
-              : 'loading...'}
-          </SidebarBody>
-          <BottomSection>
-            <button onClick={onDismissAllPosts}>Dismiss All</button>
-          </BottomSection>
-        </SidebarContainer>
-      ) : (
-        <ShowHideButton isSidebarOpen={isSidebarOpen} onClick={onToggleSidebar}>
-          <span class="material-icons">view_list</span>
-        </ShowHideButton>
-      )}
-    </>
-  );
-};;
+  return sidebarTransition.map(({item, key, props}) => (
+    item &&
+    <SidebarContainer style={props} key={key}>
+      <TopSection>
+        <h1>Reddit Posts</h1>
+        <ToggleSidebarButton icon='close'/>
+      </TopSection>
+      <SidebarBody>
+        {displayedPosts.length
+          ? displayedPosts.map((post, index) => (
+              <PostCard
+                key={post.id}
+                postData={post}
+                lastCard={index === displayedPosts.length - 1 ? false : true}
+              />
+            ))
+          : 'loading...'}
+      </SidebarBody>
+      <BottomSection>
+        <button onClick={onDismissAllPosts}>Dismiss All</button>
+      </BottomSection>
+    </SidebarContainer>
+  ))
+};
 
 const mapStateToProps = (state) => ({
   displayedPosts: state.posts.displayedPosts,

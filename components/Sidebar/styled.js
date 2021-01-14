@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 import devices from 'styles';
 
-export const SidebarContainer = styled.aside`
+
+export const SidebarContainer = styled(animated.aside)`
   background-color: #dae0e6;
   border-right: 1px solid #dae0e6;
   display: flex;
@@ -73,18 +75,5 @@ export const BottomSection = styled.div`
     :hover {
       background-color: #33a8ff;
     }
-  }
-`;
-
-export const ShowHideButton = styled.button`
-  border: ${({ isSidebarOpen }) => (isSidebarOpen ? 'none' : '1px solid #dae0e6')};
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border-radius: ${({ isSidebarOpen }) => (isSidebarOpen ? '10%' : '0')};
-  cursor: pointer;
-
-  :hover {
-    background-color: #33a8ff;
   }
 `;

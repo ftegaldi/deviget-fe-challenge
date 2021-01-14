@@ -4,7 +4,7 @@ const { processTopPostsData } = require('@helpers');
 
 const getTopPosts = async () => {
   try {
-    let res = await axios.get('https://reddit.com/top.json?limit=50');
+    let res = await axios.get('https://reddit.com/r/memes/top.json?limit=50');
     return res.data;
   } catch (error) {
     console.error(error);
