@@ -6,10 +6,7 @@ const REDDIT_URL = 'https://reddit.com/';
 const getTopPosts = async () => {
   try {
     let res = await axios.get(`${REDDIT_URL}top.json?limit=50`);
-    if (!res.data.children.length) {
-      res = await axios.get(`${REDDIT_URL}r/memes/top.json?limit=50`);
-      return res.data;
-    }
+    console.log(res.data.children);
     return res.data;
   } catch (error) {
     console.error(error);
