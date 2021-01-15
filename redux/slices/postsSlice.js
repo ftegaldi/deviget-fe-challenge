@@ -61,6 +61,7 @@ const postsSlice = createSlice({
   extraReducers: {
     [loadPosts.pending]: (state) => {
       state.posts = [];
+      state.displayedPosts = [];
       state.loading = 'loading';
     },
     [loadPosts.fulfilled]: (state, action) => {
