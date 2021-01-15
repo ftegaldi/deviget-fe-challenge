@@ -30,9 +30,7 @@ const RedditTopPostsHome = () => {
       <ToggleSidebarButton icon="view_list" />
       <SettingsButton />
       <PostViewer />
-      <Modal>
-        <div>ESTOY EN EL MODAL</div>
-      </Modal>
+      <Modal />
     </main>
   );
 };

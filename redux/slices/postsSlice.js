@@ -45,7 +45,6 @@ const postsSlice = createSlice({
     restoreState: (state) => {
       state.displayedPosts = state.posts;
       state.dismissedPosts = [];
-      state.selectedPost = {};
     },
     selectNextPost: (state, action) => {
       let nextPosition = getPostPosition(state.displayedPosts, action.payload) - 1;
