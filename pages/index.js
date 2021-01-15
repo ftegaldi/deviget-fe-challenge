@@ -1,11 +1,15 @@
-import Sidebar from 'components/Sidebar';
-import PostViewer from 'components/PostViewer'
-import { useEffect, useRef, useState } from 'react';
-import { useDispatch, connect } from 'react-redux';
-import postsReducer, { loadPosts, selectPosts } from '@slices/postsSlice';
-import ToggleSidebarButton from 'components/ToggleSidebarButton';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-const RedditTopPostsHome = ({ isSidebarOpen }) => {
+import Sidebar from 'components/Sidebar';
+import PostViewer from 'components/PostViewer';
+import ToggleSidebarButton from 'components/ToggleSidebarButton';
+import SettingsButton from 'components/SettingsButton';
+import Modal from 'components/modal/Modal';
+
+import { loadPosts } from '@slices/postsSlice';
+
+const RedditTopPostsHome = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,14 +27,14 @@ const RedditTopPostsHome = ({ isSidebarOpen }) => {
   return (
     <main>
       <Sidebar />
-      <ToggleSidebarButton icon="view_list"  />
+      <ToggleSidebarButton icon="view_list" />
+      <SettingsButton />
       <PostViewer />
+      <Modal>
+        <div>ESTOY EN EL MODAL</div>
+      </Modal>
     </main>
   );
 };
 
-const mapStateToProps = (state) => ({
-  isSidebarOpen: state.settings.isSidebarOpen,
-});
-
-export default connect(mapStateToProps)(RedditTopPostsHome);
+export default RedditTopPostsHome;

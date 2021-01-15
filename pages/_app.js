@@ -1,18 +1,14 @@
-// import '../styles/globals.css'
 import Head from 'next/head';
-
 import { Provider } from 'react-redux';
+import { createGlobalStyle } from 'styled-components';
 
 import store from 'redux/store'
-
-import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   html,
   body {
     min-height: 100vh;
     max-width: 100vw;
-    /* overflow: hidden; */
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -43,7 +39,7 @@ const ReditPostsApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Reddit top posts app</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"

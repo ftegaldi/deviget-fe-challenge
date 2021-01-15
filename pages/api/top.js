@@ -1,10 +1,15 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const axios = require('axios');
 const { processTopPostsData } = require('@helpers');
 
+const REDDIT_URL = 'https://reddit.com/';
+
 const getTopPosts = async () => {
   try {
-    let res = await axios.get('https://reddit.com/r/memes/top.json?limit=50');
+    let res = await axios.get(`${REDDIT_URL}top.json?limit=50`);
+    if (!res.data.children.length) {
+      res = await axios.get(`${REDDIT_URL}r/memes/top.json?limit=50`);
+      return res.data;
+    }
     return res.data;
   } catch (error) {
     console.error(error);

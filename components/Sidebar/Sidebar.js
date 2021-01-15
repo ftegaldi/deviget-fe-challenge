@@ -1,17 +1,15 @@
 import { connect, useDispatch } from 'react-redux';
-import { dismissAllPosts, selectPosts } from '@slices/postsSlice';
+import { useTransition } from 'react-spring';
+
 import PostCard from 'components/PostCard';
-
-import { SidebarContainer, TopSection, SidebarBody, BottomSection } from './styled';
-
-import { useSpring, useTransition, config } from 'react-spring';
+import { SidebarContainer, TopSection, SidebarBody, BottomSection, SidebarMessage } from './styled';
 import ToggleSidebarButton from 'components/ToggleSidebarButton';
-import { useEffect } from 'react';
-import { CardContainer } from 'components/PostCard/styled';
 import UndoDismissButton from 'components/UndoDismissButton/UndoDismissButton';
 
+import { dismissAllPosts } from '@slices/postsSlice';
 
-const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
+
+const Sidebar = ({ displayedPosts, isSidebarOpen, loading }) => {
   const dispatch = useDispatch();
 
   const onDismissAllPosts = () => {
@@ -26,7 +24,7 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
 
   return sidebarTransition.map(
     ({ item, key, props }) =>
-      item && (
+      item ? (
         <SidebarContainer style={props} key={key}>
           <TopSection>
             <h1>Reddit Posts</h1>
@@ -42,18 +40,21 @@ const Sidebar = ({ displayedPosts, isSidebarOpen }) => {
                     lastCard={index === displayedPosts.length - 1 ? false : true}
                   />
                 ))
-              : 'loading...'}
+              : <SidebarMessage>
+                {loading === 'loading' ? 'loading...' : 'all posts dismissed!'}
+                </SidebarMessage>}
           </SidebarBody>
           <BottomSection>
             <button onClick={onDismissAllPosts}>Dismiss All</button>
           </BottomSection>
         </SidebarContainer>
-      )
+      ) : null
   );
 };
 
 const mapStateToProps = (state) => ({
   displayedPosts: state.posts.displayedPosts,
+  loading: state.posts.loading,
   isSidebarOpen: state.settings.isSidebarOpen,
 });
 

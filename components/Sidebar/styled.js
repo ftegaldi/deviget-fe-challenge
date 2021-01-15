@@ -77,3 +77,9 @@ export const BottomSection = styled.div`
     }
   }
 `;
+
+export const SidebarMessage = styled.p`
+  align-self: center;
+  text-align: center;
+  padding-top: 40vh;
+`;

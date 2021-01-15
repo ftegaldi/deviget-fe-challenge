@@ -30,7 +30,7 @@ const postsSlice = createSlice({
     },
     dismissPost: (state, action) => {
       let position = getPostPosition(state.displayedPosts, action.payload);
-      state.dismissedPosts.push({  ...action.payload, lastPosition: position  });
+      state.dismissedPosts.push({ ...action.payload, lastPosition: position });
       state.displayedPosts.splice(position, 1);
     },
     dismissAllPosts: (state) => {
@@ -40,7 +40,22 @@ const postsSlice = createSlice({
     undoDismissPost: (state) => {
       if (!state.dismissedPosts.length) return;
       let dismissedPost = state.dismissedPosts.pop();
-      state.displayedPosts.splice(dismissedPost.lastPosition, 0, dismissedPost)
+      state.displayedPosts.splice(dismissedPost.lastPosition, 0, dismissedPost);
+    },
+    restoreState: (state) => {
+      state.displayedPosts = state.posts;
+      state.dismissedPosts = [];
+      state.selectedPost = {};
+    },
+    selectNextPost: (state, action) => {
+      let nextPosition = getPostPosition(state.displayedPosts, action.payload) - 1;
+      state.selectedPost = state.displayedPosts[nextPosition];
+      state.selectedPost.isRead = true;
+    },
+    selectPreviousPost: (state, action) => {
+      let previousPosition = getPostPosition(state.displayedPosts, action.payload) + 1;
+      state.selectedPost = state.displayedPosts[previousPosition];
+      state.selectedPost.isRead = true;
     },
   },
   extraReducers: {
@@ -60,7 +75,13 @@ const postsSlice = createSlice({
   },
 });
 
-export const { selectPost, dismissPost, dismissAllPosts, undoDismissPost } = postsSlice.actions;
+export const {
+  selectPost,
+  dismissPost,
+  dismissAllPosts,
+  undoDismissPost,
+  restoreState,
+} = postsSlice.actions;
 
 export const selectPosts = createSelector(
   (state) => ({

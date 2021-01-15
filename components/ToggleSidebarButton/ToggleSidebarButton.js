@@ -1,11 +1,8 @@
-import { useDispatch, connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleSidebar } from '@slices/settingsSlice';
 
 import { ShowHideButton } from './styled';
 
-//icons:
-// on sidebar: close
-// outside sidebar: view_list
 const ToggleSidebarButton = ({ icon, isInSidebar }) => {
   const dispatch = useDispatch();
 
