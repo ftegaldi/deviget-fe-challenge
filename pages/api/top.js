@@ -6,7 +6,6 @@ const REDDIT_URL = 'https://reddit.com/';
 const getTopPosts = async () => {
   try {
     let res = await axios.get(`${REDDIT_URL}top.json?limit=50`);
-    console.log(res.data.children);
     return res.data;
   } catch (error) {
     console.error(error);
